@@ -52,7 +52,7 @@ Gérer Stripe et Paypal.
 Si l'intégration est trop complexe il faudra s'en passer, laissez vous le temps d'essayer mais passez vite à autre chose
 Utilisez HttpClient pour la communication avec l'API Centrale
 
-🏃 Installation du projet
+- 🏃 Installation du projet :
 Installez un nouveau projet Symfony version 5.2
 Copiez les fichiers suivants dans votre projet
 simplon-roanne / venteprivee-nœerf · GitLab
