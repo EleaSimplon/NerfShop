@@ -1,0 +1,160 @@
+<style type="text/css">
+    .form-error {
+        color: red;
+        font-weight: bold;
+        padding-bottom:10px;
+    }
+    .form-error ul {
+        margin:0;
+    }
+</style>
+
+{# Etape 2 FORM CLIENT #}
+<div class="card step_2">
+
+    {{ form_start(form) }}
+   
+        <div class="card-content">
+            <span class="card-title color_product_primary center-align">Étape 2</span>
+            <p class="h6 center-align">Remplissez ce formulaire</p>
+            <div class="form-wrapper">
+                <div class="input-field">
+                    {{ form_label(form.prenom, 'Prénom') }}
+                    {{ form_widget(form.prenom) }}
+                    <div class="form-error"></div>
+                </div>
+                <div class="input-field">
+                    {{ form_label(form.nom, 'Nom') }}
+                    {{ form_widget(form.nom) }}
+                    <div class="form-error"></div>
+                </div>
+                <div class="input-field">
+                    {{ form_label(form.adresse, 'Adresse') }}
+                    {{ form_widget(form.adresse) }}
+                    <div class="form-error"></div>
+                </div>
+                <div class="input-field">
+                    {{ form_label(form.compAdress, "Complément d'adresse") }}
+                    {{ form_widget(form.compAdress) }}
+                    <div class="form-error"></div>
+                </div>
+                <div class="input-field">
+                    {{ form_label(form.ville, "Ville") }}
+                    {{ form_widget(form.ville) }}
+                    <div class="form-error"></div>
+                </div>
+                <div class="input-field">
+                    {{ form_label(form.codePostal, "Code Postal") }}
+                    {{ form_widget(form.codePostal) }}
+                    <div class="form-error"></div>
+                </div>
+                <div class="input-field">
+                    {{ form_label(form.pays, " ") }}
+                    {{ form_widget(form.pays) }}
+                    <div class="form-error"></div>
+                </div>
+                <div class="input-field">
+                    {{ form_label(form.telephone, "Telephone") }}
+                    {{ form_widget(form.telephone) }}
+                    <div class="form-error"></div>
+                </div>
+                <div class="input-field">
+                    {{ form_label(form.email.first, "Email") }}
+                    {{ form_widget(form.email.first) }}
+                    <div class="form-error"></div>
+                </div>
+                 <div class="input-field">
+                    {{ form_label(form.email.second, "Confirmation Email") }}
+                    {{ form_widget(form.email.second) }}
+                    <div class="form-error"></div>
+                </div>
+            </div>
+        </div>
+
+        {# Etape 2 FORM ADRESSE LIVRAISON #}
+
+        <ul class="collapsible">
+            <li>
+                <div class="collapsible-header"><i class="material-icons">markunread_mailbox</i>Adresse de livraison différente ?</div>
+                <div class="collapsible-body">
+                    <div class="input-field">
+                    {{ form_label(form.adresseLivraison.prenom, 'Prénom') }}
+                    {{ form_widget(form.adresseLivraison.prenom) }}
+                    <div class="form-error"></div>
+                </div>
+                    <div class="input-field">
+                        {{ form_label(form.adresseLivraison.nom, 'Nom') }}
+                        {{ form_widget(form.adresseLivraison.nom) }}
+                        <div class="form-error"></div>
+                    </div>
+                    <div class="input-field">
+                        {{ form_label(form.adresseLivraison.adresse, 'Adresse') }}
+                        {{ form_widget(form.adresseLivraison.adresse) }}
+                        <div class="form-error"></div>
+                    </div>
+                    <div class="input-field">
+                        {{ form_label(form.adresseLivraison.compAdresse, "Complément d'adresse") }}
+                        {{ form_widget(form.adresseLivraison.compAdresse) }}
+                        <div class="form-error"></div>
+                    </div>
+                    <div class="input-field">
+                       {{ form_label(form.adresseLivraison.ville, "Ville") }}
+                        {{ form_widget(form.adresseLivraison.ville) }}
+                        <div class="form-error"></div>
+                    </div>
+                    <div class="input-field">
+                        {{ form_label(form.adresseLivraison.codePostal, "Code Postal") }}
+                        {{ form_widget(form.adresseLivraison.codePostal) }}
+                        <div class="form-error"></div>
+                    </div>
+                    <div class="input-field">
+                       {{ form_label(form.adresseLivraison.pays, " ") }}
+                        {{ form_widget(form.adresseLivraison.pays) }}
+                        <div class="form-error"></div>
+                    </div>
+                    <div class="input-field">
+                        {{ form_label(form.adresseLivraison.telephone, "Telephone") }}
+                        {{ form_widget(form.adresseLivraison.telephone) }}
+                        <div class="form-error"></div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    
+    {{ form_end(form) }}
+    
+</div>
+
+{# Etape 3 #}
+<div class="card step_3">
+    <div class="card-content">
+        <span class="card-title color_product_primary center-align">Étape 3</span>
+        <p class="h6 center-align">Choisissez un paiement</p>
+        <ul class="collapsible">
+            <li class="active">
+                <div class="collapsible-header"><i class="fas fa-credit-card"></i>Payer avec la Carte Bancaire</div>
+                <div class="collapsible-body card-form">
+                    <div class="row">
+                        <div class="center-align">
+                            <button type="submit" name="paymentMethod" value="stripe" class="btn-large btn-block waves-effect waves-light">Continuer avec Stripe</button>
+                            <p>J'accepte les <a href="https://feelwellshop.com/fr/conditions-generales-de-ventes" target="_blank">conditions générales de vente</a></p>
+                            <img class="responsive-img monetico" src="assets/images/paiement-securise-stripe.jpeg" alt="Stripe protège vos achats">
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="fab fa-cc-paypal"></i>Payer avec Paypal</div>
+                <div class="collapsible-body">
+                    <div class="row">
+                        <div class="center-align">
+                            <button type="submit" name="paymentMethod" value="paypal" class="btn-large btn-block waves-effect waves-light">Continuer sur PayPal</button>
+                            <p>J'accepte les <a href="https://feelwellshop.com/fr/conditions-generales-de-ventes" target="_blank">conditions générales de vente</a></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+

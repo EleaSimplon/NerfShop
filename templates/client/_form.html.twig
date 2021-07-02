@@ -1,0 +1,73 @@
+{# {{ form_start(form) }}
+    #}
+    {# <div class="card-content">
+        <span class="card-title color_product_primary center-align">Étape 2</span>
+        <p class="h6 center-align">Remplissez ce formulaire</p>
+        <div class="form-wrapper">
+            <div class="input-field">
+                <input type="text">
+                {{ form_label(form.client.prenom, 'Prénom') }}
+                {{ form_widget(form.client.prenom) }}
+                <div class="form-error"></div>
+            </div>
+            <div class="input-field">
+                <input type="text">
+                {{ form_label(form.client.nom, 'Nom') }}
+                {{ form_widget(form.client.nom) }}
+                <div class="form-error"></div>
+            </div>
+            <div class="input-field">
+                <input type="text">
+                {{ form_label(form.client.adresse, 'Adresse') }}
+                {{ form_widget(form.client.adresse) }}
+                <div class="form-error"></div>
+            </div>
+            <div class="input-field">
+                <input type="text">
+                {{ form_label(form.client.compAdress, "Complément d'adresse") }}
+                {{ form_widget(form.client.compAdress) }}
+                <div class="form-error"></div>
+            </div>
+            <div class="input-field">
+                <input type="text">
+                {{ form_label(form.client.ville, "Ville") }}
+                {{ form_widget(form.client.ville) }}
+                <div class="form-error"></div>
+            </div>
+            <div class="input-field">
+                <input type="text">
+                {{ form_label(form.client.codePostal, "Code Postal") }}
+                {{ form_widget(form.client.codePostal) }}
+                <div class="form-error"></div>
+            </div>
+            <div class="input-field">
+                <select>
+                    {{ form_label(form.client.pays, "Pays") }}
+                    {{ form_widget(form.client.pays) }}
+                </select>
+                <div class="form-error"></div>
+            </div>
+            <div class="input-field">
+                <input type="text">
+                {{ form_label(form.client.pays, "Pays") }}
+                {{ form_widget(form.client.pays) }}
+                <div class="form-error"></div>
+            </div>
+            <div class="input-field">
+                <input type="text">
+                {{ form_label(form.client.email, "Email") }}
+                {{ form_widget(form.client.email) }}
+                <div class="form-error"></div>
+            </div>
+            <div class="input-field">
+                <input type="text">
+                {{ form_label(form.client.confirmEmail, "Confirmation Email") }}
+                {{ form_widget(form.client.confirmEmail) }}
+                <div class="form-error"></div>
+            </div>
+        </div>
+    </div> #}
+
+    {# <button class="btn">{{ button_label|default('Save') }}</button> #}
+
+{# {{ form_end(form) }} #}
